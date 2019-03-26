@@ -81,6 +81,12 @@ public class Ex03_Oracle_DML {
             // 실제) parameter
             // values(?,?,?);
             //executeUpdate() > insert, update, delete
+            
+            //DELETE
+            //delete from dmlemp where deptno = 부서번호
+//          System.out.println("월급입력 : ");
+//          deptno = Integer.parseInt(sc.nextLine());
+            
             int resultrowcount = stmt.executeUpdate(sql);
             if(resultrowcount > 0) {
                 System.out.println("반영된 행의 수 : " + resultrowcount);
