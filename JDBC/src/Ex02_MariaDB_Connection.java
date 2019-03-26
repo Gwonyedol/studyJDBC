@@ -100,15 +100,17 @@ public class Ex02_MariaDB_Connection {
 		} else {
 			System.out.println("조회된 데이터가 없엉");
 		}
+
 			
 			
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			
+            System.out.println(e.getMessage());
+        } finally {
+		
+        	if (rs != null) try {rs.close();} catch (Exception e) {}
+        	if (stmt != null) try {rs.close();} catch (Exception e) {}
+        	if (conn != null) try {rs.close();} catch (Exception e) {}
 		}
-
-		
-		
 		
 	}
 
